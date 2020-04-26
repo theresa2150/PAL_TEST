@@ -30,14 +30,14 @@ public class Dryadhp implements Runnable {
 
 		atDryad.start();
 		xiaoyaohp.timer.schedule(new xiaoyaohp(), 500, 500);
-		}
-	
+	}
+
 	static void stop() {
 		atDryad.interrupt();
 		atDryad.stop();
 		xiaoyaohp.timer.cancel();
 	}
-	
+
 	public void atDryad() throws IOException, InterruptedException {
 
 		int numG = 0;
@@ -48,9 +48,11 @@ public class Dryadhp implements Runnable {
 				numG = (int) (Math.random() * 14) + 14;
 				DryadHP = DryadHP - (int) (numG * 0.5);
 				if (DryadHP - numG * 0.5 > 0) {
-					System.out.println("언㎝HP-" + (int) (numG * 0.5) + "좥언㎝HP=" + (DryadHP));
+					System.out
+							.println("언㎝HP-" + (int) (numG * 0.5) + "좥언㎝HP=" + (DryadHP));
 				} else {
-					System.out.println("언㎝HP-" + (int) (numG * 0.5) + "좥언㎝HP=" + (DryadHP));
+					System.out
+							.println("언㎝HP-" + (int) (numG * 0.5) + "좥언㎝HP=" + (DryadHP));
 					if (DryadHP == 0) {
 						System.out.print("━찥언㎝좥�醋p뻣HP+40\n-Combat Ends-");
 						xiaoyaohp.timer.cancel();

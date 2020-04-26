@@ -19,6 +19,7 @@ public class xiaoyaohp extends TimerTask implements Runnable {
 			System.out.println("勝敗乃兵家常事，大俠請重新來過。");
 			main.XiaoYao.HP = 0;
 			Dryadhp.stop();
+
 		} else {
 			System.out.println("李逍遙HP-" + (int) (numX * 0.5) + ", 李逍遙HP=" + main.XiaoYao.HP);
 			System.out.println(Thread.currentThread().getName());
